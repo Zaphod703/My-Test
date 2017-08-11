@@ -1,0 +1,14 @@
+//1) go to your my-list page, and scroll to the bottom to make sure it's all loaded:
+//http://www.netflix.com/browse/my-list
+
+//2) Next, paste this in your developer tools console and hit enter:
+//Load JQuery
+var s=document.createElement('script');
+s.setAttribute('src','http://code.jquery.com/jquery.js');
+document.getElementsByTagName('body')[0].appendChild(s);
+
+//3) Then, paste this in and hit enter:
+//log my-list queue
+$('*[aria-label]').each(function(){console.log($(this).attr('aria-label'));});
+
+//Copy and paste the result
